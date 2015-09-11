@@ -19,4 +19,9 @@ public class NewAppApplication {
     public String one(){
         return "One from new application";
     }
+
+    @RequestMapping("/two")
+    public String two(){
+        return "Two from new application";
+    }
 }

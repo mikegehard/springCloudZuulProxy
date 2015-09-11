@@ -1,5 +1,7 @@
 zuul:
-  ignoredPatterns: /one
+  ignoredPatterns:
+    - /one
+    - /two
   routes:
     oldApp:
       path: /**

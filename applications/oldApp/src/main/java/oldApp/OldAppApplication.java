@@ -22,4 +22,9 @@ public class OldAppApplication {
     public String two(){
         return "Two from old application";
     }
+
+    @RequestMapping("/three")
+    public String three(){
+        return "Three from old application";
+    }
 }
