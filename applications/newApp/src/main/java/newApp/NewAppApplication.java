@@ -24,4 +24,9 @@ public class NewAppApplication {
     public String two(){
         return "Two from new application";
     }
+
+    @RequestMapping("/one/nested")
+    public String nestedOne(){
+        return "Nested One from new application";
+    }
 }

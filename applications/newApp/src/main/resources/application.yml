@@ -1,8 +1,16 @@
 zuul:
-  ignoredPatterns:
-    - /one
-    - /two
+  # We need to do this pattern because mapping to /** won't
+  # allow you to grab the /one request in the enclosing app.
   routes:
-    oldApp:
-      path: /**
+#    one:
+#      path: /one
+#      url: http://localhost:9090
+    nestedOne:
+      path: /one/nested
+      url: http://localhost:9090
+    two:
+      path: /two
+      url: http://localhost:9090
+    three:
+      path: /three
       url: http://localhost:9090

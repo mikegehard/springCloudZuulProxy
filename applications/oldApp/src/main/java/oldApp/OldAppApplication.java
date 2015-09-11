@@ -18,6 +18,11 @@ public class OldAppApplication {
         return "One from old application";
     }
 
+    @RequestMapping("/one/nested")
+    public String nestedOne(){
+        return "Nested One from old application";
+    }
+
     @RequestMapping("/two")
     public String two(){
         return "Two from old application";
