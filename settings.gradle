@@ -1,0 +1,3 @@
+include 'applications:oldApp'
+include 'applications:newApp'
+rootProject.name = 'zuulProxyIssue'
