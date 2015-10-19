@@ -1,13 +1,12 @@
 zuul:
   # Using this approach gets me /one/nested properly
   # but not /one
-  ignoredPatterns: /one/**
+#  ignoredPatterns: /one/**
   routes:
-    # This will allow use to serve all /one routes from the
-    # new (aka this) app
-#    one:
-#      path: /one/**
-#      url: forward:/one
+    # Using this pattern breaks both /one/nested and /one
+    one:
+      path: /one/**
+      url: forward:/one
     legacy:
       path: /**
       url: http://localhost:9090
