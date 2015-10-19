@@ -1,16 +1,13 @@
 zuul:
-  # We need to do this pattern because mapping to /** won't
-  # allow you to grab the /one request in the enclosing app.
+  # Using this approach gets me /one/nested properly
+  # but not /one
+  ignoredPatterns: /one/**
   routes:
+    # This will allow use to serve all /one routes from the
+    # new (aka this) app
 #    one:
-#      path: /one
-#      url: http://localhost:9090
-    nestedOne:
-      path: /one/nested
-      url: http://localhost:9090
-    two:
-      path: /two
-      url: http://localhost:9090
-    three:
-      path: /three
+#      path: /one/**
+#      url: forward:/one
+    legacy:
+      path: /**
       url: http://localhost:9090
